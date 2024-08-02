@@ -1,35 +1,54 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-  </head>
+<html lang="en">
 
-  <body>
-    <!-- 星空html -->
-    <!-- <div> -->
-    <div class="container2">
-      <div class="content">
-        <canvas id="universe"></canvas>
-      </div>
-    </div>
-    <!-- </div> -->
-    <div class="title">
-      <!-- EDIT HERE -->
-      <h2 class="STARDUST2">Rất thương ThanhMer</h2>
-      <img class="img" src="EDIT_ME.png" alt="JUNO_OKYO" />
-      <canvas id="pinkboard"></canvas>
-      <audio controls autoplay>
-        <source src="NOP.mp3" type="audio/mp3">
-      </audio>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/particle.js"></script>
-    <script src="js/universe.js"></script>
-  </body>
+<body>
+  <!-- 星空html -->
+  <div class="container2">
+    <div class="content">
+      <canvas id="universe"></canvas>
+    </div>
+  </div>
+  <div class="title">
+    <h2 class="STARDUST2">Rất là thương ThanhMer <i class="fas fa-heart" style="margin-left: 10px;"></i></h2>
+    <img class="img" id="playable-img" src="LTTM.jpg" alt="ThanhMer" />
+    <canvas id="pinkboard"></canvas>
+  </div>
+  <audio id="myAudio">
+    <source src="NOP.mp3" type="audio/mp3">
+  </audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/particle.js"></script>
+  <script src="js/universe.js"></script>
+  <script>
+    // JavaScript để phát âm thanh khi nhấp vào thẻ <canvas>
+    document.addEventListener('DOMContentLoaded', function () {
+      var audio = document.getElementById('myAudio');
+      var canvasElements = document.querySelectorAll('canvas');
+      
+      canvasElements.forEach(function(canvas) {
+        canvas.addEventListener('click', function () {
+          // Kiểm tra nếu âm thanh đang phát
+          if (audio.paused) {
+            audio.play();  // Phát âm thanh nếu nó đang dừng
+          } else {
+            audio.pause();  // Dừng âm thanh nếu nó đang phát
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
 </html>
