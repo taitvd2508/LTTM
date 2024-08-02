@@ -19,36 +19,16 @@
     </div>
   </div>
   <div class="title">
-    <h2 class="STARDUST2">Rất là thương ThanhMer</h2>
-    <img class="img" src="LTTM.jpg" alt="ThanhMer" />
-    <canvas id="pinkboard"></canvas>
+    <h3 class="STARDUST3">À thì có rất nhiều thứ muốn nói. Cơ mà sẽ nói ngắn gọn thoi !!! 
+      <br>
+      <br>
+      <a href="html/home.html" style="color: yellow; text-shadow: 5px 5px 5px #ff0000;">Ấn vào đây xem giúp tuii nhenn !!!</a>
+    </h3>
   </div>
-  <audio id="myAudio">
-    <source src="TiecTraSao.mp3" type="audio/mp3">
-  </audio>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/particle.js"></script>
   <script src="js/universe.js"></script>
-  <script>
-    alert("Nếu em muốn nghe 1 chút âm nhạc thì bấm vào màn hình nhaaa !!!");
-    document.addEventListener('DOMContentLoaded', function () {
-      var audio = document.getElementById('myAudio');
-      var canvasElements = document.querySelectorAll('canvas');
-      
-      canvasElements.forEach(function(canvas) {
-        canvas.addEventListener('click', function () {
-          // Kiểm tra nếu âm thanh đang phát
-          if (audio.paused) {
-            audio.play();  // Phát âm thanh nếu nó đang dừng
-          } else {
-            audio.pause();  // Dừng âm thanh nếu nó đang phát
-          }
-        });
-      });
-    });
-  </script>
 </body>
 
 </html>
